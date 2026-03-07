@@ -21,24 +21,7 @@ import {
   TypescriptIcon,
   VscodeIcon,
 } from "@/assets/icons";
-import IslandLuxury from "@/assets/trubooker.png";
-import Orralearn from "@/assets/Screenshot (414).png";
-import zig from "@/assets/zid.png";
-import bit from "@/assets/orra4 (1).png";
-import astro from "@/assets/astro.png";
-import Trybe from "@/assets/Hero Section.png";
-import Travel from "@/assets/senpay.png";
-import hoterr from "@/assets/Screenshot (423).png";
-import Em2geeFoods2 from "@/assets/Pro6.png";
-import Em2geeFoods3 from "@/assets/Pro2.png";
-import Em2geeFoods4 from "@/assets/Pro3.png";
-import Em2geeFoods5 from "@/assets/Untitled design (1).png";
-import mobile from "@/assets/mobile.webp";
-import decmark from "@/assets/decmark_cover.jpg";
-import centrl from "@/assets/centrl.jpeg";
-import slice from "@/assets/App_Feature_Compressed.jpg";
-import answer from "@/assets/answer.png";
-import mobile1 from "@/assets/68747470733a2f2f646f776e6c6f61642e617070646576732e6e65742f62616e6e65722f656e7661746f2f75692f7862616e6b2f312e706e67.png";
+
 
 export const SOCIAL_LINKS = [
   {
@@ -94,7 +77,7 @@ export const PROJECTS = [
     date: "2026",
     stacks: ["React.js", "Tailwind CSS", "Redux", "Material UI", "Framer Motion", "Typescript"],
     live: "https://grovine.ng",
-    code: "#",
+    code: "https://github.com/Chinex4/grovine-web",
   },
   {
     name: "Zagasm Studios Live streaming Platform",
@@ -103,7 +86,7 @@ export const PROJECTS = [
     date: "2026",
     stacks: ["React.js", "Tailwind CSS", "Redux", "Material UI", "JavaScript", "REST API"],
     live: "https://studios.zagasm.com",
-    code: "#",
+    code: "https://github.com/zagasm/zagasm_web_studio",
   },
   {
     name: "Zagasm Memes Social Media Platform",
@@ -139,7 +122,7 @@ export const PROJECTS = [
     date: "2025",
     stacks: ["React.js", "Tailwind CSS", "Redux", "Material UI", "Framer Motion", "Typescript"],
     live: "https://preciousevans.com",
-    code: "#",
+    code: "https://github.com/chinex4/pe",
   },
   {
     name: "Riyallure",
@@ -165,8 +148,8 @@ export const PROJECTS = [
     desc: "Automobile e-commerce platform for buying and selling cars, built with React.js and Tailwind CSS for a seamless user experience.",
     date: "2025",
     stacks: ["React.js", "Tailwind CSS", "JavaScript"],
-    live: "https://autolin-admin.vercel.app",
-    code: "#",
+    live: "https://autolinmotors.com.ng",
+    code: "https://github.com/chinex4/autolin-motors",
   },
 ];
 
@@ -180,7 +163,7 @@ export const Mobile_APP = [
     live: "https://drive.google.com/file/d/170qnmG571k2O2n2r-A-LNs4gLUDDUhS6/view?usp=sharing",
     android:
       "https://play.google.com/store/apps/details?id=com.bizinote.app&pcampaignid=web_share",
-    code: "#",
+    code: "https://github.com/chinex4/grovine-app",
   },
   {
     name: "Bizinote Mobile App",
@@ -191,7 +174,7 @@ export const Mobile_APP = [
     live: "https://apps.apple.com/ng/app/bizinote/id6757477200",
     android:
       "https://play.google.com/store/apps/details?id=com.bizinote.app&pcampaignid=web_share",
-    code: "#",
+    code: "https://github.com/chinex4/bizinote-app",
   },
   {
     name: "Hexavia Mobile App",
@@ -202,7 +185,7 @@ export const Mobile_APP = [
     live: "https://apps.apple.com/ng/app/hexavia-business-management/id6755739856",
     android:
       "https://play.google.com/store/apps/details?id=com.chinexx.hexavia&pcampaignid=web_share",
-    code: "#",
+    code: "https://github.com/chinex4/hexavia-app",
   },
   {
     name: "Foodhut Mobile App",
@@ -217,6 +200,6 @@ export const Mobile_APP = [
       "Payments",
     ],
     live: "https://play.google.com/store/apps/details?id=com.mobile.foodhut&pcampaignid=web_share",
-    code: "#",
+    code: "https://github.com/chinex4/foodhut",
   },
 ];
