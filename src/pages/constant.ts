@@ -42,125 +42,17 @@ import mobile1 from "@/assets/68747470733a2f2f646f776e6c6f61642e617070646576732e
 
 export const SOCIAL_LINKS = [
   {
-    link: "https://github.com/abed-obaah",
+    link: "https://github.com/chinex4",
     icon: GithubIcon,
   },
   {
-    link: "https://www.linkedin.com/in/abednegoobaah",
+    link: "https://www.linkedin.com/in/chinaza-okuefuna",
     icon: LinkedinIcon,
   },
   {
-    link: "https://twitter.com/abed_obaah",
+    link: "https://twitter.com/chinexdev",
     icon: TwitterXIcon,
   },
-];
-
-export const PROJECTS = [
-  {
-    name: "Centrl",
-    image: centrl,
-    desc: "The ultimate platform for hosting and managing events, as well as creating and participating in exciting competitions.",
-    date: "Mar 10, 2025",
-    stacks: ["React Native", "Javascript", "Tailwind CSS", "Redux","React"],
-    live: "https://www.centrl.ng/",
-    code: "https://github.com/abed-obaah/",
-  },
-  {
-    name: "SprintVault",
-    image: Trybe,
-    desc: " Platform to Convert Your Crypto To Cash.",
-    date: "Dec 20, 2025",
-    stacks: ["React.js", "Javascript", "Tailwind CSS", "Redux"],
-    live: "http://sprintvault.com/",
-    code: "https://github.com/abed-obaah/",
-  },
-  {
-    name: "Send Pay",
-    image: Travel,
-    desc: "Seamless & Secure Cross-Border Payments for People, Businesses & Enterprises.",
-    date: "December 06, 2025",
-    stacks: ["jQuery", "React", "Gsap", "Sentry"],
-    live: "https://sendpayments.com/",
-    code: "#",
-  },
-  {
-    name: "Fiatplug",
-    image: zig,
-    desc: "Instant cash for gift cards & crypto exchange",
-    date: "Feb 10, 2023",
-    stacks: ["React.js", "Javascript", "CSS", "Redux","Binance APi","coinbase Api","code mirror"],
-    live: "https://www.fiatplug.com/",
-    
-  },
-  // {
-  //   name: "wealth-management-site",
-  //   image: astro,
-  //   desc: "an innovative Web3-powered platform designed to revolutionize the way users engage with cryptocurrencies and blockchain technology. This project aims to create a dynamic and immersive space that combines cutting-edge web development with the decentralized and secure nature of blockchain.",
-  //   date: "Jan 01, 2023",
-  //   stacks: ["Reactjs", "Javascript", "CSS", "Redux","Binance APi","coinbase Api","code mirror"],
-  //   live: "https://wealth-management-site.netlify.app/en.html",
-  //   code: "#",
-  // },
- 
-  {
-    name: "Trubooker",
-    image: IslandLuxury,
-    desc: "Redirecting your plans into Reality",
-    date: "Jul 20, 2024",
-    stacks: ["React", "Javascript", "CSS", "Redux"],
-    live: "https://www.trubooker.com/",
-    figma:
-      "#",
-  },
-  // {
-  //   name: "Davinci-writer",
-  //   desc: "Ultimate Ai Creator,blogs,text-to-speach,ad creations.",
-  //   date: "Jul 30, 2023",
-  //   stacks: ["Next.js", "Typescript", "Tailwind CSS", "SASS", "OpenAi Api",],
-  //   live: "https://Davinci.berkine.me",
-  // },
-  // {
-  //   name: "abednegoobaah.vercel.app",
-  //   desc: "Of course, my personal portfolio 😎. The codebase is publicly available for use.",
-  //   date: "Nov 10, 2023",
-  //   stacks: [
-  //     "React.js + Vite.js",
-  //     "Typescript",
-  //     "SASS",
-  //     "Tailwind CSS",
-  //     "Lenis (smooth scrolling)",
-  //     "Vercel",
-  //   ],
-  //   code: "https://github.com/abed-obaah/portfolio",
-  // },
-  
-  // {
-  //   name: "Hosterr",
-  //   image: hoterr,
-  //   desc: "With Hosterr, get your website up and running in no less than 5 minutes with the most competitive pricing packages available online.",
-  //   date: "December 27, 2020",
-  //   stacks: ["jQuery", "Javascript", "HTML", "CSS"],
-  //   live: "https://hosterr-waitlist.vercel.app",
-  //   code: "#",
-  // },
-  // {
-  //   name: "Mintly",
-  //   image: Em2geeFoods2,
-  //   desc: "A Platform to swap,buy,trade coins, and collect Loans.",
-  //   date: "December 27, 2020",
-  //   stacks: ["React Native","CSS"],
-  //   live: "https://content.mintsoft.org/mintly.apk",
-  //   code: "#",
-  // },
-  // {
-  //   name: "Kicksciti",
-  //   image: Em2geeFoods3,
-  //   desc: "A branded Mobile App to sell and buy goods 😄.",
-  //   date: "December 27, 2020",
-  //   stacks: ["React Native", "Javascript", "React native animated", "CSS"],
-  //   live: "https://play.google.com/store/apps/details?id=com.kicksciti.android",
-  //   code: "#",
-  // },
 ];
 
 export const TECH_STACKS_TOOLS = [
@@ -172,6 +64,7 @@ export const TECH_STACKS_TOOLS = [
       { icon: TypescriptIcon, name: "Laravel" },
       { icon: ReactIcon, name: "React.js" },
       { icon: ReduxIcon, name: "Redux" },
+      { icon: NextJSIcon, name: "Next.js" },
       { icon: ExpoIcon, name: "React Native (Expo)" },
       { icon: SassIcon, name: "SASS" },
       { icon: TailwindIcon, name: "Tailwind CSS" },
@@ -193,43 +86,137 @@ export const TECH_STACKS_TOOLS = [
     ],
   },
 ];
+export const PROJECTS = [
+  {
+    name: "Grovine Landing Page",
+    image: "/images/grovine.png", // import your image
+    desc: "A landing page built with React.js and Tailwind CSS, featuring a modern design, responsive layout, and smooth animations to showcase the Grovine app.",
+    date: "2026",
+    stacks: ["React.js", "Tailwind CSS", "Redux", "Material UI", "Framer Motion", "Typescript"],
+    live: "https://grovine.ng",
+    code: "#",
+  },
+  {
+    name: "Zagasm Studios Live streaming Platform",
+    image: "/images/studios.png", // import your image
+    desc: "A live streaming platform built with React.js and Tailwind CSS, featuring real-time video streaming, user interactions, and a sleek interface.",
+    date: "2026",
+    stacks: ["React.js", "Tailwind CSS", "Redux", "Material UI", "JavaScript", "REST API"],
+    live: "https://studios.zagasm.com",
+    code: "#",
+  },
+  {
+    name: "Zagasm Memes Social Media Platform",
+    image: "/images/zagasm.png", // import your image
+    desc: "A social media platform built with React.js and Tailwind CSS, featuring user profiles, post creation, commenting, liking, and real-time updates.",
+    date: "2026",
+    stacks: ["React.js", "Tailwind CSS", "Redux", "Material UI", "JavaScript", "REST API"],
+    live: "https://zagasm.com",
+    code: "#",
+  },
+  {
+    name: "Spitchlabs AI-Powered Speech Analytics Platform",
+    image: "/images/spitch.png", // import your image
+    desc: "An AI-powered speech analytics platform built with Next.js and Tailwind CSS, featuring real-time transcription, sentiment analysis, and detailed reporting.",
+    date: "2025",
+    stacks: ["Next.js", "Tailwind CSS", "Typescript", "REST API"],
+    live: "https://spitchlabs.com",
+    code: "#",
+  },
+  {
+    name: "Foodhut Landing Page",
+    image: "/images/foodhut-web.png", // import your image
+    desc: "Food ordering and delivery platform built with React.js and Tailwind CSS, featuring restaurant discovery, cart, checkout, order tracking, push notifications, and in-app payments.",
+    date: "2025",
+    stacks: ["React.js", "Tailwind CSS", "JavaScript", "REST API"],
+    live: "https://foodhut.co",
+    code: "#",
+  },
+  {
+    name: "Precious Evans Brand Strategy Website",
+    image: "/images/pe.png", // import your image
+    desc: "A corporate website for a brand strategy company built with React.js and Tailwind CSS, featuring a clean design, responsive layout, and smooth animations to showcase the company's services and portfolio.",
+    date: "2025",
+    stacks: ["React.js", "Tailwind CSS", "Redux", "Material UI", "Framer Motion", "Typescript"],
+    live: "https://preciousevans.com",
+    code: "#",
+  },
+  {
+    name: "Riyallure",
+    image: "/images/riyallure.png", // import your image
+    desc: "A Perfume E-commerce platform built with Laravel, focused on delivering a smooth online shopping experience.",
+    date: "2025",
+    stacks: ["Laravel", "PHP", "MySQL", "REST API"],
+    live: "https://riyallure.com.ng",
+    code: "#",
+  },
+  {
+    name: "JL3 Services Limited",
+    image: "/images/jl3.png", // import your image
+    desc: "Corporate website for a procurement, marine, and logistics company.",
+    date: "2025",
+    stacks: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "Laravel"],
+    live: "https://jl3services.com",
+    code: "#",
+  },
+  {
+    name: "Autolin Motors",
+    image: "/images/autolin.png", // import your image
+    desc: "Automobile e-commerce platform for buying and selling cars, built with React.js and Tailwind CSS for a seamless user experience.",
+    date: "2025",
+    stacks: ["React.js", "Tailwind CSS", "JavaScript"],
+    live: "https://autolin-admin.vercel.app",
+    code: "#",
+  },
+];
 
 export const Mobile_APP = [
-   {
-    name: "Slics Ai",
-    image: slice,
-    desc: "Automated Expense Tracking",
-    date: "May, 2025",
-    stacks: ["React Native", "Javascript", "Tailwind CSS", "Redux"],
-    live: "https://apps.apple.com/ng/app/slice-ai/id6739975347",
+  {
+    name: "Grovine Mobile App",
+    image: "/images/grovine.png", // import your image
+    desc: "Grocery delivery mobile app built with React Native, featuring user-friendly interfaces, real-time order tracking, and seamless integration with backend services for a smooth shopping experience. Recipes, meal planning, and personalized recommendations to enhance the user experience.",
+    date: "2025",
+    stacks: ["React Native", "JavaScript", "REST API", "Mobile UI"],
+    live: "https://drive.google.com/file/d/170qnmG571k2O2n2r-A-LNs4gLUDDUhS6/view?usp=sharing",
+    android:
+      "https://play.google.com/store/apps/details?id=com.bizinote.app&pcampaignid=web_share",
     code: "#",
   },
-   {
-    name: "Rentify (Android)",
-    image: mobile,
-    desc: "RENTIFY - ONLINE CAR RENTAL BOOKING SYSTEM,Rentify offers an easy Car Finder feature for locating ideal vehicles based on preferences.",
-    date: "Mar 10, 2023",
-    stacks: ["React Native", "Javascript", "Tailwind CSS", "Redux"],
-    live: "https://drive.google.com/file/d/1HXhVMLZflDi081pEJTIMnuI58iLarZd0/view?usp=drive_link",
+  {
+    name: "Bizinote Mobile App",
+    image: "/images/bizinote.webp", // import your image
+    desc: "Cross-platform inventory management app that helps businesses manage products, stock movements, categories, and reports.",
+    date: "2025",
+    stacks: ["React Native", "JavaScript", "REST API", "Mobile UI"],
+    live: "https://apps.apple.com/ng/app/bizinote/id6757477200",
+    android:
+      "https://play.google.com/store/apps/details?id=com.bizinote.app&pcampaignid=web_share",
     code: "#",
   },
-   {
-    name: "BankX (Android)",
-    image: mobile1,
-    desc: "BankX is a full application  for Online Banking & Money Transfer Wallets. If you are interested to develop your own Online Banking & Money Transfer Android and iOS apps like Paypal, Payoneer, or Skrill.",
-    date: "Feb 10, 2022",
-    stacks: ["React Native", "Javascript", "CSS", "Redux"],
-    live: "https://drive.google.com/file/d/1cWMaFoTC_PdouXnuM2jjonARvzwBwc5f/view?usp=sharing",
+  {
+    name: "Hexavia Mobile App",
+    image: "/images/hexavia.png", // import your image
+    desc: "Cross-platform business management mobile application built for iOS and Android with optimized API integration and strong app performance.",
+    date: "2025",
+    stacks: ["React Native", "JavaScript", "REST API", "Mobile Architecture"],
+    live: "https://apps.apple.com/ng/app/hexavia-business-management/id6755739856",
+    android:
+      "https://play.google.com/store/apps/details?id=com.chinexx.hexavia&pcampaignid=web_share",
     code: "#",
   },
-     {
-    name: "Answer.ai(Android)",
-    image: answer,
-    desc: "Answer ai is an ai tutor,to build skills in an grade ",
-    date: "mar 15, 2023",
-    stacks: ["React Native", "Javascript", "CSS", "Redux"],
-    // live: "https://drive.google.com/file/d/1j3lN1FjfGF53bxFa58dciMph1tBU9LSZ/view?usp=sharing",
-    live: "https://play.google.com/store/search?q=answer+ai&c=apps&hl=en",
-    code: "https://github.com/abed-obaah/",
+  {
+    name: "Foodhut Mobile App",
+    image: "/images/foodhut.webp", // import your image
+    desc: "Food ordering and delivery mobile app with restaurant discovery, cart, checkout, order tracking, push notifications, and in-app payments.",
+    date: "2025",
+    stacks: [
+      "React Native",
+      "JavaScript",
+      "REST API",
+      "Push Notifications",
+      "Payments",
+    ],
+    live: "https://play.google.com/store/apps/details?id=com.mobile.foodhut&pcampaignid=web_share",
+    code: "#",
   },
-]
+];
