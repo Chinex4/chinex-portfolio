@@ -12,11 +12,19 @@ const Title = ({
   const content = title.toLowerCase();
 
   return (
-    <h2 className="text-zinc-50 relative font-bold text-3xl sm:text-4xl mt-3 whitespace-nowrap">
-      {title}
+    <h2
+      className={classNames(
+        "relative mt-3 text-3xl font-extrabold tracking-tight text-zinc-50 sm:text-5xl",
+        {
+          "text-center": align === "center" || ignore,
+        }
+      )}
+    >
+      <span className="relative z-10">{title}</span>
       <span
+        aria-hidden="true"
         className={classNames(
-          "absolute text-4xl sm:text-5xl font-bold left-0 -top-4 sm:-top-6 bg-clip-text text-transparent bg-gradient-to-b from-zinc-800 -z-10",
+          "absolute left-0 top-1/2 -z-10 -translate-y-1/2 bg-gradient-to-r from-orange-strong/25 to-white/0 bg-clip-text text-5xl font-extrabold text-transparent blur-[1px] sm:text-7xl",
           {
             "md:left-1/2 md:-translate-x-1/2": align === "center",
             "!left-1/2 !-translate-x-1/2": ignore,

@@ -1,16 +1,16 @@
 @import "@/assets/styles/variables";
 
 header {
-  background-color: transparent;
   position: fixed;
-  z-index: 99;
+  z-index: 100;
 
   &::before {
     content: "";
     position: absolute;
     z-index: -1;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(18px);
     inset: 0;
+    border-radius: inherit;
   }
 
   nav a.active {
@@ -20,15 +20,23 @@ header {
       content: "";
       position: absolute;
       background-color: $strong-orange;
-      width: 8px;
-      height: 5px;
-      bottom: -8px;
+      width: 18px;
+      height: 3px;
+      bottom: -10px;
       left: 50%;
       translate: -50% 0;
+      border-radius: 999px;
     }
   }
 
+  .mobile-nav__eyebrow {
+    display: none;
+  }
+
   .menu-btn {
+    position: relative;
+    z-index: 102;
+
     .btn-bar {
       width: 25px;
       height: 2px;
@@ -62,24 +70,95 @@ header {
 
 @media only screen and (max-width: 768px) {
   header {
-    nav {
+    nav.mobile-nav {
       position: fixed;
-      inset: 0;
-      left: 35%;
-      background-color: $dark;
+      inset: -20px;
+      z-index: 101;
+      min-height: 100dvh;
+      padding: 7.5rem 1.5rem 2rem;
+      background:
+        radial-gradient(circle at 18% 10%, rgba(255, 90, 31, 0.22), transparent 18rem),
+        radial-gradient(circle at 90% 90%, rgba(255, 255, 255, 0.08), transparent 18rem),
+        rgba(7, 8, 13, 0.98);
+      backdrop-filter: blur(24px);
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
-      margin: 0 auto;
-      row-gap: 2.5rem;
-      height: 100dvh;
-      transform: translateX(100%);
-      transition: transform 350ms cubic-bezier(1, 0.18, 0.6, 1.1);
+      align-items: stretch;
+      row-gap: 0.85rem;
+      transform: translateX(110%);
+      opacity: 0;
+      pointer-events: none;
+      transition:
+        transform 420ms cubic-bezier(0.19, 1, 0.22, 1),
+        opacity 240ms ease;
+      visibility: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 5.75rem 1.5rem 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 2rem;
+        background: rgba(255, 255, 255, 0.045);
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.36);
+        z-index: -1;
+      }
 
       &.nav-visible {
-        transform: translateX(0%);
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
       }
+
+      .mobile-nav__eyebrow {
+        display: block;
+        margin: 0 auto 1rem;
+        color: rgba(255, 177, 153, 0.9);
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+      }
+
+      a {
+        display: flex;
+        min-height: 4rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.04);
+        color: rgba(255, 255, 255, 0.88) !important;
+        font-size: 1.35rem;
+        font-weight: 800;
+        transition:
+          background-color 180ms ease,
+          border-color 180ms ease,
+          color 180ms ease;
+
+        &:hover,
+        &:focus {
+          border-color: rgba(255, 177, 153, 0.7);
+          background: rgba(255, 90, 31, 0.16);
+          color: white !important;
+        }
+
+        &.active::after {
+          display: none;
+        }
+      }
+
+      > div {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+      }
+    }
+
+    nav {
+      border-left: 0;
     }
   }
 }

@@ -1,87 +1,78 @@
-import { useState, useEffect } from 'react';
-import { FigmaOutlinedIcon, GithubIcon, LinkSquareIcon } from "@/assets/icons";
+import { GithubIcon, LinkSquareIcon } from "@/assets/icons";
 
-const ProjectCard = ({ project }) => {
-  const [cardHeight, setCardHeight] = useState('auto');
+type Project = {
+  name: string;
+  image?: string;
+  desc: string;
+  date: string;
+  stacks: string[];
+  live?: string;
+  code?: string;
+};
 
-  useEffect(() => {
-    const adjustCardHeight = () => {
-      const maxHeight = Math.max(
-        document.getElementById('card-content').scrollHeight,
-        document.getElementById('card-content').clientHeight
-      );
-      setCardHeight(`${maxHeight * 1.5}px`);
-    };
-
-    adjustCardHeight();
-    window.addEventListener('resize', adjustCardHeight);
-    return () => {
-      window.removeEventListener('resize', adjustCardHeight);
-    };
-  }, []);
+const ProjectCard = ({ project }: { project: Project }) => {
+  const primaryLink = project.live || project.code || "#";
 
   return (
-    <a href={project.live || project.code} target="_blank" rel="noopener noreferrer" className="card-link">
-      <div className="bg-card flex flex-col gap-4 p-3 md:p-6 border" style={{ height: cardHeight }}>
-        <div className="flex justify-between items-center">
-          <span className="text-zinc-400 text-sm">{project.date}</span>
-          <div className="flex gap-4 items-center">
+    <article className="group responsive-card flex h-full flex-col overflow-hidden rounded-none pb-8 transition-all duration-300 sm:rounded-[1.75rem] sm:pb-0 sm:hover:-translate-y-1 sm:hover:border-orange-soft/45 sm:hover:shadow-orange-strong/10">
+      {project.image ? (
+        <a href={primaryLink} target="_blank" rel="noopener noreferrer" className="block cursor-pointer overflow-hidden">
+          <img
+            src={project.image}
+            alt={`${project.name} project preview`}
+            className="h-48 w-full rounded-2xl object-cover transition duration-700 group-hover:scale-105 sm:h-56 sm:rounded-none"
+            loading="lazy"
+          />
+        </a>
+      ) : null}
+      <div className="flex flex-1 flex-col gap-5 px-0 pt-5 sm:p-5 md:p-6">
+        <div className="flex items-center justify-between gap-4">
+          <span className="rounded-full border border-white/10 bg-white/[.04] px-3 py-1 text-sm font-semibold text-zinc-300">
+            {project.date}
+          </span>
+          <div className="flex items-center gap-3">
             {project.code ? (
-              <a href={project.code} className="text-zinc-500 transition duration-300 hover:text-orange-strong" target="_blank">
+              <a
+                href={project.code}
+              className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-white/10 bg-white/[.035] text-zinc-300 transition duration-300 hover:border-orange-soft hover:text-orange-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange-soft sm:bg-transparent"
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`${project.name} source code`}
+              >
                 <GithubIcon width={20} height={20} />
               </a>
             ) : null}
             {project.live ? (
-              <a href={project.live} className="text-zinc-500 transition duration-300 hover:text-orange-strong" target="_blank">
+              <a
+                href={project.live}
+                className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-white/10 bg-white/[.035] text-zinc-300 transition duration-300 hover:border-orange-soft hover:text-orange-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange-soft sm:bg-transparent"
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`${project.name} live website`}
+              >
                 <LinkSquareIcon width={20} height={20} />
               </a>
             ) : null}
           </div>
         </div>
-        <div id="card-content">
-          <h3 className="text-zinc-50 font-bold text-xl sm:text-2xl">{project.name}</h3>
-          {project.image ? (
-            <div className="image-container">
-              <img src={project.image} alt="" className="w-full h-full object-cover border" />
-            </div>
-          ) : null}
-          <p className="text-zinc-500 text-sm sm:text-base text-justify mt-4">{project.desc}</p>
-          <div className="flex flex-wrap gap-x-2 gap-y-1">
-            <span className="text-zinc-50 font-semibold text-sm sm:text-base">Stack/Tools:</span>
-            {project.stacks.map((stack, idx) => (
-              <span key={idx} className="text-zinc-500 text-sm sm:text-base">
-                {`${stack}${idx !== project.stacks.length - 1 ? ", " : "."}`}
-              </span>
-            ))}
-          </div>
+        <div className="space-y-4">
+          <h3 className="text-xl font-extrabold leading-tight text-zinc-50 sm:text-2xl">
+            {project.name}
+          </h3>
+          <p className="text-sm leading-7 text-zinc-400 sm:text-base">{project.desc}</p>
         </div>
-        <style jsx>{`
-          .card-link {
-            transition: box-shadow 0.3s ease-in-out; /* Smooth transition for the effect */
-            display: block; /* Ensures the link takes up the entire space of the parent */
-          }
-
-          .bg-card {
-            box-shadow: 0 0 0 transparent; /* Initial shadow */
-          }
-
-          .card-link:hover .bg-card {
-            box-shadow: 0 0 2px rgba(255, 255, 255, 0.7); /* Shadow effect on hover */
-          }
-
-          .image-container {
-            height: 200px; /* Adjust the height based on your design */
-            overflow: hidden; /* Hides any image overflow */
-          }
-
-          .image-container img {
-            width: 100%; /* Ensures the image takes up the full width of its container */
-            height: 100%; /* Ensures the image takes up the full height of its container */
-            object-fit: cover; /* Maintains aspect ratio and covers the entire container */
-          }
-        `}</style>
+        <div className="mt-auto flex flex-wrap gap-2 pt-2">
+          {project.stacks.slice(0, 6).map((stack) => (
+            <span
+              key={stack}
+              className="rounded-full border border-white/10 bg-white/[.04] px-3 py-1 text-xs font-semibold text-zinc-300"
+            >
+              {stack}
+            </span>
+          ))}
+        </div>
       </div>
-    </a>
+    </article>
   );
 };
 

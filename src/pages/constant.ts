@@ -1,6 +1,5 @@
 import {
   AndroidStudioIcon,
-  BlenderIcon,
   CssIcon,
   ExpoIcon,
   FigmaIcon,
@@ -45,6 +44,7 @@ export const TECH_STACKS_TOOLS = [
       { icon: JavascriptIcon, name: "Javascript" },
       { icon: TypescriptIcon, name: "Php" },
       { icon: TypescriptIcon, name: "Laravel" },
+      { icon: JavascriptIcon, name: "Node.js" },
       { icon: ReactIcon, name: "React.js" },
       { icon: ReduxIcon, name: "Redux" },
       { icon: NextJSIcon, name: "Next.js" },
@@ -71,22 +71,31 @@ export const TECH_STACKS_TOOLS = [
 ];
 export const PROJECTS = [
   {
-    name: "Grovine Landing Page",
-    image: "/images/grovine.png", // import your image
-    desc: "A landing page built with React.js and Tailwind CSS, featuring a modern design, responsive layout, and smooth animations to showcase the Grovine app.",
-    date: "2026",
-    stacks: ["React.js", "Tailwind CSS", "Redux", "Material UI", "Framer Motion", "Typescript"],
-    live: "https://grovine.ng",
-    code: "https://github.com/Chinex4/grovine-web",
-  },
-  {
-    name: "Zagasm Studios Live streaming Platform",
-    image: "/images/studios.png", // import your image
+    name: "Xilolo Live streaming Platform",
+    image: "/images/xilolo.png", // import your image
     desc: "A live streaming platform built with React.js and Tailwind CSS, featuring real-time video streaming, user interactions, and a sleek interface.",
     date: "2026",
     stacks: ["React.js", "Tailwind CSS", "Redux", "Material UI", "JavaScript", "REST API"],
-    live: "https://studios.zagasm.com",
-    code: "https://github.com/zagasm/zagasm_web_studio",
+    live: "https://xilolo.com",
+    code: "https://github.com/zagasm/xilolo-web",
+  },
+  {
+    name: "Bizinote Inventory Management System",
+    image: "/images/bizinote.png", // import your image
+    desc: "An inventory management system built with React.js and Tailwind CSS, featuring real-time inventory tracking, user management, and a sleek interface.",
+    date: "2026",
+    stacks: ["React.js", "Tailwind CSS", "Redux", "Material UI", "JavaScript", "REST API"],
+    live: "https://bizinote.com",
+    code: "https://github.com/bizinote/bizinote-frontend-react",
+  },
+  {
+    name: "Ourtalento",
+    image: "/images/ourtalento.png",
+    desc: "A personal growth and skill-building community platform designed to help young people gain clarity, learn valuable skills, build income systems, and stay accountable through structured learning, mentorship, and community support.",
+    date: "2026",
+    stacks: ["React.js", "Tailwind CSS", "JavaScript", "REST API"],
+    live: "https://ourtalento.com",
+    code: "https://github.com/chinex4/talento",
   },
   {
     name: "Zagasm Memes Social Media Platform",
@@ -96,6 +105,15 @@ export const PROJECTS = [
     stacks: ["React.js", "Tailwind CSS", "Redux", "Material UI", "JavaScript", "REST API"],
     live: "https://zagasm.com",
     code: "#",
+  },
+  {
+    name: "Grovine Landing Page",
+    image: "/images/grovine.png", // import your image
+    desc: "A landing page built with React.js and Tailwind CSS, featuring a modern design, responsive layout, and smooth animations to showcase the Grovine app.",
+    date: "2026",
+    stacks: ["React.js", "Tailwind CSS", "Redux", "Material UI", "Framer Motion", "Typescript"],
+    live: "https://grovine.ng",
+    code: "https://github.com/Chinex4/grovine-web",
   },
   {
     name: "Spitchlabs AI-Powered Speech Analytics Platform",

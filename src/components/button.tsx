@@ -37,7 +37,7 @@ const CustomButton: React.FC<IButton> = ({
   icon,
 }) => {
   const btnClassnames = classNames(
-    "bg-orange-strong text-white font-semibold flex items-center justify-center gap-3 px-8 hover:shadow-2xl hover:shadow-orange-strong select-none transition",
+    "group cursor-pointer bg-orange-strong text-white font-semibold flex items-center justify-center gap-3 px-8 shadow-lg shadow-orange-strong/20 hover:bg-orange-soft hover:text-dark hover:shadow-2xl hover:shadow-orange-strong/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange-soft select-none transition-all duration-300",
     {
       "h-9 text-base": size === "sm",
       "h-12": size === "md",
@@ -47,13 +47,19 @@ const CustomButton: React.FC<IButton> = ({
     }
   );
 
-  const IconNode = ICONS_MAPPER[icon];
+  const IconNode = icon ? ICONS_MAPPER[icon] : null;
+  const isExternalHref = href ? /^https?:\/\//.test(href) : false;
 
   if (href) {
     return (
-      <a href={href} className={btnClassnames} target="_blank">
+      <a
+        href={href}
+        className={btnClassnames}
+        target={isExternalHref ? "_blank" : undefined}
+        rel={isExternalHref ? "noreferrer" : undefined}
+      >
         {text}
-        {icon ? <IconNode width={20} height={20} /> : null}
+        {IconNode ? <IconNode width={20} height={20} /> : null}
       </a>
     );
   }
@@ -66,7 +72,7 @@ const CustomButton: React.FC<IButton> = ({
       disabled={disabled || isLoading}
     >
       {text}
-      {icon ? <IconNode width={20} height={20} /> : null}
+      {IconNode ? <IconNode width={20} height={20} /> : null}
     </button>
   );
 };

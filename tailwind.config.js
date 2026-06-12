@@ -5,17 +5,21 @@ export default {
     extend: {
       colors: {
         orange: {
-          strong: "#ca3300",
+          strong: "#ff5a1f",
+          soft: "#ffb199",
         },
-        dark: "#0a0a0a",
-        card: " rgb(255 255 255 / .015)",
+        dark: "#07080d",
+        card: "rgb(255 255 255 / .065)",
+        muted: "#9aa4b2",
       },
       borderColor: {
-        DEFAULT: "#1a1a1a",
+        DEFAULT: "rgb(255 255 255 / .12)",
       },
       animation: {
-        title: "title 3s ease-out forwards",
-        "fade-in": "fade-in 3s ease-in-out",
+        title: "title 1.2s cubic-bezier(.19,1,.22,1) forwards",
+        "fade-in": "fade-in .9s ease-out both",
+        float: "float 8s ease-in-out infinite",
+        "pulse-glow": "pulse-glow 5s ease-in-out infinite",
       },
       keyframes: {
         title: {
@@ -41,12 +45,29 @@ export default {
         "fade-in": {
           "0%": {
             opacity: 0,
-          },
-          "75%": {
-            opacity: 0,
+            transform: "translateY(18px)",
           },
           "100%": {
             opacity: 1,
+            transform: "translateY(0)",
+          },
+        },
+        float: {
+          "0%, 100%": {
+            transform: "translateY(0)",
+          },
+          "50%": {
+            transform: "translateY(-18px)",
+          },
+        },
+        "pulse-glow": {
+          "0%, 100%": {
+            opacity: ".55",
+            transform: "scale(1)",
+          },
+          "50%": {
+            opacity: ".95",
+            transform: "scale(1.05)",
           },
         },
       },
