@@ -11,8 +11,17 @@ const HeroSection = () => {
             Available for product builds and mobile app work
           </div>
           <div className="space-y-4">
-            <h1 className="animate-title text-balance text-5xl font-extrabold leading-[0.95] tracking-tight text-white sm:text-6xl md:text-7xl xl:text-8xl">
-              Chinaza Okuefuna
+            <h1 className="text-balance text-5xl font-extrabold leading-[0.95] tracking-tight text-white sm:text-6xl md:text-7xl xl:text-8xl">
+              <span className="block overflow-hidden pb-1">
+                <span className="block animate-title will-change-transform">
+                  Chinaza
+                </span>
+              </span>
+              <span className="block overflow-hidden pb-1">
+                <span className="block animate-title will-change-transform [animation-delay:120ms]">
+                  Okuefuna
+                </span>
+              </span>
             </h1>
             <h2 className="animate-fade-in max-w-3xl text-2xl font-semibold text-zinc-200 sm:text-3xl">
               Full-stack mobile engineer building polished web and app experiences.
@@ -59,8 +68,8 @@ const HeroSection = () => {
               </div>
               <div className="space-y-5">
                 {[
-                  ["11+", "shipped products"],
-                  ["React Native", "mobile-first delivery"],
+                  ["20+", "shipped products"],
+                  ["React + React Native", "frontend systems"],
                   ["Node.js + Laravel", "backend systems"],
                 ].map(([value, label]) => (
                   <div

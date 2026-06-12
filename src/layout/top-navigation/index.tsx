@@ -1,6 +1,6 @@
 import classNames from "classnames";
-// import Logo from "@/assets/icons/john.svg?react";
 import CustomButton from "@/components/button";
+import Logo from "@/components/logo";
 import useTopNavigation from "./hooks/useTopNavigation";
 
 import "./nav.scss";
@@ -23,9 +23,7 @@ const TopNavigation = () => {
         left: margin,
       }}
     >
-      {/* <a href="/" className="text-zinc-50">
-        <Logo width={100} height={100} />
-      </a> */}
+      <Logo />
       <nav
         className={classNames("mobile-nav md:border-l-0", {
           "nav-visible": menu,
@@ -36,7 +34,7 @@ const TopNavigation = () => {
           <a
             key={idx}
             href={item.path}
-            className="h-fit px-5 text-base font-medium text-zinc-300 transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange-soft"
+            className="nav-link h-fit px-5 text-base font-medium text-zinc-300 transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange-soft"
             onClick={() => {
               setMenu(false);
               lenis.scrollTo(item.path);

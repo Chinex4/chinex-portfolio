@@ -16,7 +16,7 @@ export default {
         DEFAULT: "rgb(255 255 255 / .12)",
       },
       animation: {
-        title: "title 1.2s cubic-bezier(.19,1,.22,1) forwards",
+        title: "title .85s cubic-bezier(.22,1,.36,1) both",
         "fade-in": "fade-in .9s ease-out both",
         float: "float 8s ease-in-out infinite",
         "pulse-glow": "pulse-glow 5s ease-in-out infinite",
@@ -25,21 +25,11 @@ export default {
         title: {
           "0%": {
             opacity: 0,
-            "line-height": "0%",
-            transform: "scale(1.25)",
-          },
-          "25%": {
-            opacity: 0,
-            "line-height": "0%",
-            transform: "scale(1.25)",
-          },
-          "80%": {
-            opacity: 1,
-            "line-height": "50%",
+            transform: "translate3d(0, 115%, 0)",
           },
           "100%": {
             opacity: 1,
-            "line-height": "100%",
+            transform: "translate3d(0, 0, 0)",
           },
         },
         "fade-in": {
